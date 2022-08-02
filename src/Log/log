@@ -1,0 +1,8 @@
+2022-Aug-02 10:28:08,159 [main] com.ijmeet.keyword.UIKeyword 
+  INFO  url is launched https://ijmeet.com/
+2022-Aug-02 10:28:19,289 [main] com.ijmeet.keyword.UIKeyword 
+  INFO  browser is closed successfully
+2022-Aug-02 10:28:25,643 [main] com.ijmeet.keyword.UIKeyword 
+  INFO  Chromebrowser is launched successfully
+2022-Aug-02 10:28:29,080 [main] com.ijmeet.keyword.UIKeyword 
+  INFO  browser is closed successfully
