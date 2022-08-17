@@ -14,31 +14,29 @@ import com.ijmeet.utils.CaptureScreenShot;
 public class TestBase {
 //	private static final Logger log = Logger.getLogger(TestBase.class);
 
-   @Parameters("Browser-name")
+	@Parameters("Browser-name")
 	@BeforeMethod
-	public void setUp(@Optional ("Chrome") String browserNm) throws Exception {
-		  
-		if((browserNm.isEmpty())||(browserNm.equals("null"))) {
-			browserNm="Chrome";
+	public void setUp(@Optional("Chrome") String browserNm) throws Exception {
+
+		if ((browserNm.isEmpty()) || (browserNm.equals("null"))) {
+			browserNm = "Chrome";
 			System.out.println("Setting default browser as Chrome ");
 		}
-		
+
 		UIKeyword.openBrowser(browserNm);
 	}
-	
+
 	@Test
 	public void onTestFailure() {
-   CaptureScreenShot cs=new CaptureScreenShot();
-     Assert.assertEquals(false, true);
-	
+		CaptureScreenShot cs = new CaptureScreenShot();
+		Assert.assertEquals(false, true);
+
 	}
-	
-	
+
 	@AfterMethod
 	public void tearDown() {
 
 		UIKeyword.closeBrowser();
 	}
-
 
 }
