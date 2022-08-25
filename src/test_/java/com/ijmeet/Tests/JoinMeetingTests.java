@@ -3,6 +3,7 @@ package com.ijmeet.Tests;
 import static org.testng.Assert.assertTrue;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -26,17 +27,10 @@ public class JoinMeetingTests extends TestBase {
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 		jm.clickOnJoinMeetingButton();
 
-		String expectedTitle = "Join Meeting";
 
-		boolean url = UIKeyword.driver.getTitle().contains(expectedTitle);
+		List<WebElement> l= UIKeyword.driver.findElements(By.xpath("//*[contains(text(),'Join Meeting')]"));
 
-		if (url = true) {
-			System.out.println("Pass");
-		} else {
-			System.out.println("Fail");
-		}
-
-		// Assert.assertTrue(UIKeyword.driver.getTitle().contains(expectedTitle));
+		Assert.assertTrue(l.size() > 0);
 
 	}
 
