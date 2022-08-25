@@ -25,11 +25,10 @@ public class TestBase {
 		
 		UIKeyword.openBrowser(browserNm);
 	}
-	
 	@Test
 	public void onTestFailure() {
-   CaptureScreenShot cs=new CaptureScreenShot();
-     Assert.assertEquals(false, true);
+     CaptureScreenShot cs=new CaptureScreenShot();
+     Assert.assertEquals(true, true);
 	
 	}
 	
