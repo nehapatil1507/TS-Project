@@ -18,7 +18,7 @@ public class LoginTest extends TestBase {
 		EnvironmentUtil env = new EnvironmentUtil();
 		LoginPage lp = new LoginPage();
 		String expectedurl = "dashboard";
-
+		String ExpectedTitle = "Sign In";
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(250));
 		lp.clickOnSignInButton();
@@ -31,8 +31,10 @@ public class LoginTest extends TestBase {
 			expectedurl = actualurl;
 		}
 
-		Assert.assertEquals(actualurl, expectedurl);
-		System.out.println("Actual : " + actualurl + " Expected : " + expectedurl);
+		String actualTitle = UIKeyword.driver.getTitle();
+
+		Assert.assertEquals(actualTitle, ExpectedTitle);
+		System.out.println("Actual : " + actualTitle + " Expected : " + ExpectedTitle);
 
 	}
 

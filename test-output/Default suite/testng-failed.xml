@@ -3,13 +3,23 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.ijmeet.Tests.SignUpTest">
         <methods>
+=======
+      <class name="com.ijmeet.Tests.TwitterTests">
+        <methods>
+          <include name="onTestFailure"/>
+>>>>>>> 40425512256cc55c960d25460943d285a51aa2d0
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="verifyAfterRegistrationIsPagePopulatesToDashboard"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.ijmeet.Tests.SignUpTest -->
+=======
+      </class> <!-- com.ijmeet.Tests.TwitterTests -->
+>>>>>>> 40425512256cc55c960d25460943d285a51aa2d0
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

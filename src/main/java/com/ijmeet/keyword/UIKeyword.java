@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -26,7 +27,6 @@ public class UIKeyword {
 			// System.setProperty("Webdriver.chrome.driver", "chromedriver.exe");
 			ChromeOptions option = new ChromeOptions();
 			option.addArguments("--disable-notifications");
-
 			driver = new ChromeDriver(option);
 
 		} else if (browserName.equalsIgnoreCase("Firefox")) {
@@ -56,15 +56,15 @@ public class UIKeyword {
 
 		for (String window : windows) {
 			if (driver.switchTo().window(window).getTitle().equalsIgnoreCase(byTitle)) {
-				System.out.println("Switched towindow" + byTitle);
+				System.out.println("Switched to window" + byTitle);
 				break;
 			}
 		}
 	}
 
-	public static void enterText(By element, String text) {
+	public static void enterText(WebElement name, String text) {
 
-		driver.findElement(element).sendKeys(text);
+		((WebElement) driver.findElements((By) name)).sendKeys(text);
 
 	}
 
@@ -77,6 +77,7 @@ public class UIKeyword {
 			e.printStackTrace();
 		}
 		robo.keyPress(keyCode);
+		robo.keyRelease(keyCode);
 
 	}
 
@@ -84,6 +85,13 @@ public class UIKeyword {
 
 		Actions act = new Actions(driver);
 		act.click(element).build().perform();
+	}
+
+	
+	public static void clickOn(WebElement element) {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+
+		jse.executeScript("arguments[0].scrollIntoView()", element);
 	}
 
 }
