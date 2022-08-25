@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ijmeet.Tests.JoinMeetingTests">
+      <class name="com.ijmeet.Tests.TwitterTests">
         <methods>
           <include name="onTestFailure"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.ijmeet.Tests.JoinMeetingTests -->
+      </class> <!-- com.ijmeet.Tests.TwitterTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

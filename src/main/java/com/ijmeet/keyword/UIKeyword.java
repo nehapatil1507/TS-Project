@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,7 +26,7 @@ public class UIKeyword {
 			WebDriverManager.chromedriver().setup();
 			// System.setProperty("Webdriver.chrome.driver", "chromedriver.exe");
 			ChromeOptions option = new ChromeOptions();
-			option.addArguments("--disable-notifications");
+			option.addArguments("--disable-notifications", "start-maximized");
 
 			driver = new ChromeDriver(option);
 
@@ -56,7 +57,7 @@ public class UIKeyword {
 
 		for (String window : windows) {
 			if (driver.switchTo().window(window).getTitle().equalsIgnoreCase(byTitle)) {
-				System.out.println("Switched towindow" + byTitle);
+				System.out.println("Switched to window" + byTitle);
 				break;
 			}
 		}
@@ -87,12 +88,14 @@ public class UIKeyword {
 		act.click(element).build().perform();
 	}
 
-	
-
 	public static void enterText(WebElement element, String text) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
+	public static void clickOn(WebElement element) {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+
+		jse.executeScript("arguments[0].scrollIntoView()", element);
+	}
 
 }
