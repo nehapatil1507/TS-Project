@@ -5,12 +5,28 @@
     <classes>
       <class name="com.ijmeet.Tests.LoginTest">
         <methods>
+          <include name="verifyUserCanLoginWithEmailAndPassword"/>
           <include name="verityloginToijmeetBy"/>
           <include name="onTestFailure"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.ijmeet.Tests.LoginTest -->
+      <class name="com.ijmeet.config.TestBase">
+        <methods>
+          <include name="onTestFailure"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.ijmeet.config.TestBase -->
+      <class name="com.ijmeet.Tests.Sign_UpTest">
+        <methods>
+          <include name="onTestFailure"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyRegistrationFormAcceptsDetails"/>
+        </methods>
+      </class> <!-- com.ijmeet.Tests.Sign_UpTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

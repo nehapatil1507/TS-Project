@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-02T16:21:48 IST" name="Default suite" finished-at="2022-08-02T16:22:42 IST" duration-ms="53400">
+  <suite started-at="2022-08-27T11:54:50 IST" name="Default suite" finished-at="2022-08-27T11:58:06 IST" duration-ms="195855">
     <groups>
     </groups>
-    <test started-at="2022-08-02T16:21:48 IST" name="Default test" finished-at="2022-08-02T16:22:42 IST" duration-ms="53400">
-      <class name="com.ijmeet.Tests.LoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.LoginTest@1b1426f4]" started-at="2022-08-02T16:21:48 IST" name="setUp" finished-at="2022-08-02T16:22:13 IST" duration-ms="24431" status="PASS">
+    <test started-at="2022-08-27T11:54:50 IST" name="Default test" finished-at="2022-08-27T11:58:06 IST" duration-ms="195855">
+      <class name="com.ijmeet.Tests.Sign_UpTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:54:51 IST" name="setUp" finished-at="2022-08-27T11:55:00 IST" duration-ms="9376" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,58 +18,152 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verityloginToijmeetBy()[pri:0, instance:com.ijmeet.Tests.LoginTest@1b1426f4]" started-at="2022-08-02T16:22:13 IST" name="verityloginToijmeetBy" finished-at="2022-08-02T16:22:29 IST" duration-ms="15828" status="FAIL">
-          <exception class="org.openqa.selenium.json.JsonException">
+        <test-method signature="verifyRegistrationFormAcceptsDetails()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:55:00 IST" name="verifyRegistrationFormAcceptsDetails" finished-at="2022-08-27T11:55:27 IST" duration-ms="27526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistrationFormAcceptsDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:55:27 IST" name="tearDown" finished-at="2022-08-27T11:55:28 IST" duration-ms="516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:55:28 IST" name="setUp" finished-at="2022-08-27T11:55:33 IST" duration-ms="4826" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySignUpPageConsistOfContactSalelink()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:55:33 IST" name="verifySignUpPageConsistOfContactSalelink" finished-at="2022-08-27T11:55:52 IST" duration-ms="18896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpPageConsistOfContactSalelink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:55:52 IST" name="tearDown" finished-at="2022-08-27T11:55:52 IST" duration-ms="330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:55:52 IST" name="setUp" finished-at="2022-08-27T11:55:56 IST" duration-ms="4029" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySignUpPageConsistOfHostMeetinglink()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:55:56 IST" name="verifySignUpPageConsistOfHostMeetinglink" finished-at="2022-08-27T11:56:16 IST" duration-ms="19556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpPageConsistOfHostMeetinglink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:56:16 IST" name="tearDown" finished-at="2022-08-27T11:56:17 IST" duration-ms="1683" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:56:17 IST" name="setUp" finished-at="2022-08-27T11:56:22 IST" duration-ms="4948" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySignUpPageConsistOfJoinMeetinglink()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:56:22 IST" name="verifySignUpPageConsistOfJoinMeetinglink" finished-at="2022-08-27T11:56:49 IST" duration-ms="26769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpPageConsistOfJoinMeetinglink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:56:49 IST" name="tearDown" finished-at="2022-08-27T11:56:49 IST" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:56:49 IST" name="setUp" finished-at="2022-08-27T11:56:51 IST" duration-ms="1871" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySignUpPageConsistOfLanguageTranslatorButton()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:56:51 IST" name="verifySignUpPageConsistOfLanguageTranslatorButton" finished-at="2022-08-27T11:57:14 IST" duration-ms="22926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpPageConsistOfLanguageTranslatorButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:57:14 IST" name="tearDown" finished-at="2022-08-27T11:57:14 IST" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:57:14 IST" name="setUp" finished-at="2022-08-27T11:57:17 IST" duration-ms="2701" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySignUpPageConsistOfSignInButton()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:57:17 IST" name="verifySignUpPageConsistOfSignInButton" finished-at="2022-08-27T11:57:33 IST" duration-ms="15771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpPageConsistOfSignInButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:57:33 IST" name="tearDown" finished-at="2022-08-27T11:57:33 IST" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:57:33 IST" name="setUp" finished-at="2022-08-27T11:57:35 IST" duration-ms="2005" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySignUpPageConsistOfSignUpButton()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:57:35 IST" name="verifySignUpPageConsistOfSignUpButton" finished-at="2022-08-27T11:57:55 IST" duration-ms="20454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpPageConsistOfSignUpButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:57:55 IST" name="tearDown" finished-at="2022-08-27T11:57:55 IST" duration-ms="171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:57:55 IST" name="setUp" finished-at="2022-08-27T11:57:58 IST" duration-ms="3040" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="onTestFailure()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:57:58 IST" name="onTestFailure" finished-at="2022-08-27T11:57:58 IST" duration-ms="4" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[java.lang.reflect.InvocationTargetException
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'DESKTOP-MOB5JUI', ip: '192.168.68.240', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d4306a3034b6bed202e72d2ab6cd3374, actions {actions=[org.openqa.selenium.interactions.Sequence@61f80d55]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SWAPNI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54951/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d4306a3034b6bed202e72d2ab6cd3374]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'DESKTOP-MOB5JUI', ip: '192.168.68.240', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d4306a3034b6bed202e72d2ab6cd3374, actions {actions=[org.openqa.selenium.interactions.Sequence@61f80d55]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SWAPNI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54951/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d4306a3034b6bed202e72d2ab6cd3374
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
-at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
-at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
-at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
-at org.openqa.selenium.json.Json.toJson(Json.java:42)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:127)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:637)
-at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-at com.ijmeet.keyword.UIKeyword.clickON(UIKeyword.java:90)
-at com.ijmeet.pages.LoginPage.clickOnSignInButton(LoginPage.java:32)
-at com.ijmeet.Tests.LoginTest.verityloginToijmeetBy(LoginTest.java:24)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:751)
+at org.testng.Assert.assertEquals(Assert.java:761)
+at com.ijmeet.config.TestBase.onTestFailure(TestBase.java:32)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -98,64 +192,17 @@ at org.testng.TestNG.run(TestNG.java:1007)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'DESKTOP-MOB5JUI', ip: '192.168.68.240', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
-at org.openqa.selenium.json.Json.toJson(Json.java:40)
-... 39 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
-... 60 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit']"}
-  (Session info: chrome=103.0.5060.134)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'DESKTOP-MOB5JUI', ip: '192.168.68.240', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d4306a3034b6bed202e72d2ab6cd3374, findElement {using=xpath, value=//button[@type='submit']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SWAPNI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54951/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d4306a3034b6bed202e72d2ab6cd3374
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy19.getWrappedElement(Unknown Source)
-at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:260)
-at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:209)
-at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
-at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
-... 65 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.json.JsonException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verityloginToijmeetBy -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.LoginTest@1b1426f4]" started-at="2022-08-02T16:22:40 IST" name="tearDown" finished-at="2022-08-02T16:22:42 IST" duration-ms="1116" status="PASS">
+        </test-method> <!-- onTestFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.Sign_UpTest@7e5afaa6]" started-at="2022-08-27T11:58:06 IST" name="tearDown" finished-at="2022-08-27T11:58:06 IST" duration-ms="181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ijmeet.Tests.LoginTest -->
+      </class> <!-- com.ijmeet.Tests.Sign_UpTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
