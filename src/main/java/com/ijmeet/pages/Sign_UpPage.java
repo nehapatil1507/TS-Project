@@ -1,15 +1,7 @@
 package com.ijmeet.pages;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
-import java.util.Calendar;
-import java.util.Date;
 
-import javax.imageio.ImageIO;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -54,8 +46,9 @@ public class Sign_UpPage {
 
 	@FindBy(xpath = "//div[@class='my-0 mb-3 d-flex justify-content-between align-items-center']/div/button")
 	public WebElement SignUp;
-	//div[@class='my-0 mb-3 d-flex justify-content-between align-items-center']/div/button"}
-	 
+	// div[@class='my-0 mb-3 d-flex justify-content-between
+	// align-items-center']/div/button"}
+
 	@FindBy(xpath = "//ul[@class='navbar-nav ml-auto customize-right-navbar']/li[1]/a")
 	public WebElement joinMeeting;
 
@@ -74,36 +67,44 @@ public class Sign_UpPage {
 	@FindBy(xpath = "//ul[@class='navbar-nav ml-auto customize-right-navbar']/li[6]/a/span[2]")
 	public WebElement arabic_language_convertor_tab;
 
+	@FindBy(xpath="//a[@href='https://ijmeet.com/login/google?csrt=4494339304593800721']")
+	public WebElement Sign_In_With_GoogleLink;
+	
+	@FindBy(xpath="//a[@href='https://ijmeet.com/login/facebook?csrt=4494339304593800721']")
+	public WebElement Sign_In_With_FaceBookLink;
+	
+	@FindBy(xpath="//a[@href='https://saml.ijmeet.com/shibauth/sso-live.php']")
+	public WebElement Sign_In_With_FederationLink;
+	
 	public Sign_UpPage() {
 
 		PageFactory.initElements(UIKeyword.driver, this);
 	}
 
 	public void clickOnSign_UP() {
-		 Actions act = new Actions(UIKeyword.driver);
-		 act.click(Sign_Up).build().perform();
-	
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(Sign_Up).build().perform();
+
 	}
 
 	public void fillForm() throws InterruptedException {
 		Thread.sleep(500);
-	/*	// UIKeyword.enterText((By) fullName, "Divya Dhoke");
-		UIKeyword.driver.findElement((By) fullName).sendKeys("Divya Dhoke");
-		Thread.sleep(500);
-		UIKeyword.driver.findElement((By) companyName).sendKeys("Divya Dresses");
-		Thread.sleep(500);
-		UIKeyword.driver.findElement((By) EmailId).sendKeys("divyadhoke@gmail.com");
-		Thread.sleep(500);
-		UIKeyword.driver.findElement((By) MobileNo).sendKeys("8976541236");
-		Thread.sleep(500);
-		UIKeyword.driver.findElement((By) Password).sendKeys("DivyaD236@");
-
-		*/
-		  Actions act = new Actions(UIKeyword.driver); 
-		  act.sendKeys(fullName,"Divya Dhoke").sendKeys(companyName, "Divya Dresses") .sendKeys(EmailId,
-		  "divyadhoke@gmail.com").sendKeys(MobileNo, "8976541236") .sendKeys(Password,
-		  "DivyaD236@").build().perform();
-		 }
+		/*
+		 * // UIKeyword.enterText((By) fullName, "Divya Dhoke");
+		 * UIKeyword.driver.findElement((By) fullName).sendKeys("Divya Dhoke");
+		 * Thread.sleep(500); UIKeyword.driver.findElement((By)
+		 * companyName).sendKeys("Divya Dresses"); Thread.sleep(500);
+		 * UIKeyword.driver.findElement((By) EmailId).sendKeys("divyadhoke@gmail.com");
+		 * Thread.sleep(500); UIKeyword.driver.findElement((By)
+		 * MobileNo).sendKeys("8976541236"); Thread.sleep(500);
+		 * UIKeyword.driver.findElement((By) Password).sendKeys("DivyaD236@");
+		 * 
+		 */
+		Actions act = new Actions(UIKeyword.driver);
+		act.sendKeys(fullName, "Divya Dhoke").sendKeys(companyName, "Divya Dresses")
+				.sendKeys(EmailId, "divyadhoke@gmail.com").sendKeys(MobileNo, "8976541236")
+				.sendKeys(Password, "DivyaD236@").build().perform();
+	}
 
 	public void reCaptchaClick() {
 		WebDriverWait wait = new WebDriverWait(UIKeyword.driver, Duration.ofSeconds(10));
@@ -163,4 +164,27 @@ public class Sign_UpPage {
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(250));
 		act.click(arabic_language_convertor_tab).build().perform();
 	}
+
+	public void clickOnSignInWithGoogleLink() {
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).click(Sign_In_With_GoogleLink).build().perform();
+		 
+	}
+
+	public void clickOnSignInWithFaceBookLink() {
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).click(Sign_In_With_FaceBookLink).build().perform();
+	}
+
+	public void clickOnSignInWithFederationLink() {
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).click(Sign_In_With_FederationLink).build().perform();
+	}
+
+	public void checkForLoginIn() {
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).build().perform();
+
+	}
+
 }

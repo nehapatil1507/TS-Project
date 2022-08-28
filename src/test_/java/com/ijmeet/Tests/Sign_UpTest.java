@@ -125,4 +125,151 @@ public class Sign_UpTest extends TestBase {
 		}
 	}
 
+	public void verifyAlreadyAccountIsPresent() {
+		EnvironmentUtil env = new EnvironmentUtil();
+		Sign_UpPage sp = new Sign_UpPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		sp.clickOnSign_UP();
+		sp.checkForLoginIn();
+		String actualString = UIKeyword.driver
+				.findElement(By.xpath("//label[@class='form-check-label-dont-have mb-0']")).getText();
+		String expectedString = "Already have account";
+		if (actualString.contains(expectedString)) {
+			expectedString = actualString;
+			Assert.assertEquals(actualString, expectedString, "actual and expected are not match exactly");
+      }
+	}
+
+	public void verifyLoginWithSignInLinkIsPresent() {
+		EnvironmentUtil env = new EnvironmentUtil();
+		Sign_UpPage sp = new Sign_UpPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		sp.clickOnSign_UP();
+		sp.checkForLoginIn();
+
+		String actualString = UIKeyword.driver
+				.findElement(By.xpath("//label[@class='form-check-label-dont-have mb-0']/a/span")).getText();
+		String expectedString = "Login In";
+		if (actualString.contains(expectedString)) {
+			expectedString = actualString;
+			Assert.assertEquals(actualString, expectedString, "actual and expected are not match exactly");
+		}
+
+		}
+		
+	public void verifyLoginLinkNavigateToLoginPage(){
+		EnvironmentUtil env = new EnvironmentUtil();
+		Sign_UpPage sp = new Sign_UpPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		sp.clickOnSign_UP();
+		sp.checkForLoginIn();
+
+		String actualUrl= UIKeyword.driver.getCurrentUrl();
+				
+		String expectedUrl = "/login";
+		if (actualUrl.contains(expectedUrl)) {
+			expectedUrl = actualUrl;
+			Assert.assertEquals(actualUrl, expectedUrl, "actual and expected are not match exactly");
+           }
+	}
+	
+	public void verifySignInWithGoogleLinkIsPresent() {
+		
+		EnvironmentUtil env = new EnvironmentUtil();
+		Sign_UpPage sp = new Sign_UpPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		sp.clickOnSign_UP();
+		sp.checkForLoginIn();
+
+		String actualString = UIKeyword.driver
+				.findElement(By.xpath("//div[@class='form-group common-view-sign-in']/a[1]")).getText();
+		String expectedString = "Sign in with Google";
+		if (actualString.contains(expectedString)) {
+			expectedString = actualString;
+			Assert.assertEquals(actualString, expectedString, "actual and expected are not match exactly");
+		}
+     }
+	public void verifyGoogleLinkNavigateToSignInWithGooglePage() {
+		EnvironmentUtil env = new EnvironmentUtil();
+		Sign_UpPage sp = new Sign_UpPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		sp.clickOnSign_UP();
+		sp.checkForLoginIn();
+		sp.clickOnSignInWithGoogleLink();
+		String actualUrl=UIKeyword.driver.getCurrentUrl();
+		String expUrl="https://ijmeet.com/login/google";
+		if (actualUrl.contains(expUrl)) {
+			expUrl=actualUrl;
+			Assert.assertEquals(actualUrl, expUrl, "actual and expected are not match exactly");
+	
+		}
+	}
+	
+	public void verifySignInWithFaceBookLinkIsPresent() {
+		EnvironmentUtil env = new EnvironmentUtil();
+		Sign_UpPage sp = new Sign_UpPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		sp.clickOnSign_UP();
+		sp.checkForLoginIn();
+        String actualString = UIKeyword.driver
+				.findElement(By.xpath("//div[@class='form-group common-view-sign-in']/a[2]")).getText();
+		String expectedString = "Sign in with Facebook";
+		if (actualString.contains(expectedString)) {
+			expectedString = actualString;
+			Assert.assertEquals(actualString, expectedString, "actual and expected are not match exactly");
+	}}
+	
+	public void verifyFacebookLinkNavigateToSignInWithFacebookPage() {
+		EnvironmentUtil env = new EnvironmentUtil();
+		Sign_UpPage sp = new Sign_UpPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		sp.clickOnSign_UP();
+		sp.checkForLoginIn();
+		sp.clickOnSignInWithFaceBookLink();
+		String actualUrl=UIKeyword.driver.getCurrentUrl();
+		String expUrl="https://ijmeet.com/login/facebook";
+		if (actualUrl.contains(expUrl)) {
+			expUrl=actualUrl;
+			Assert.assertEquals(actualUrl, expUrl, "actual and expected are not match exactly");
+		}
+	}
+	
+	public void verifySignInWithFederationLinkIsPresent() {
+		EnvironmentUtil env = new EnvironmentUtil();
+		Sign_UpPage sp = new Sign_UpPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		sp.clickOnSign_UP();
+		sp.checkForLoginIn();
+
+		String actualString = UIKeyword.driver
+				.findElement(By.xpath("//div[@class='form-group common-view-sign-in']/a[3]")).getText();
+		String expectedString = "Sign in with Federation";
+		if (actualString.contains(expectedString)) {
+			expectedString = actualString;
+			Assert.assertEquals(actualString, expectedString, "actual and expected are not match exactly");
+	}}
+/*	public void verifyFederationLinkNavigateToSignInWithFederationPage() {
+		EnvironmentUtil env = new EnvironmentUtil();
+		Sign_UpPage sp = new Sign_UpPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		sp.clickOnSign_UP();
+		sp.checkForLoginIn();
+		sp.clickOnSignInWithFederationLink();
+		String actualUrl=UIKeyword.driver.getCurrentUrl();
+		String expUrl="https://ijmeet.com/login/google";
+		if (actualUrl.contains(expUrl)) {
+			expUrl=actualUrl;
+			Assert.assertEquals(actualUrl, expUrl, "actual and expected are not match exactly");
+		}
+	}
+*/
 }
