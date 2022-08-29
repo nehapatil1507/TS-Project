@@ -55,11 +55,19 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
+<<<<<<< HEAD
 <td>Tests passed/Failed/Skipped:</td><td>0/6/0</td>
 </tr><tr>
 <td>Started on:</td><td>Fri Aug 26 19:39:53 IST 2022</td>
 </tr>
 <tr><td>Total time:</td><td>180 seconds (180629 ms)</td>
+=======
+<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Aug 24 18:16:26 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>196 seconds (196869 ms)</td>
+>>>>>>> origin
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,18 +83,33 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td title='com.ijmeet.config.TestBase.onTestFailure()'><b>onTestFailure</b><br>Test class: com.ijmeet.config.TestBase</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
 	at com.ijmeet.config.TestBase.onTestFailure(TestBase.java:32)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace81194567", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
 <div class='stack-trace' id='stack-trace81194567'><pre>java.lang.AssertionError: expected [true] but found [false]
+=======
+<td title='com.ijmeet.Tests.SignUpTest.verifyAfterRegistrationIsPagePopulatesToDashboard()'><b>verifyAfterRegistrationIsPagePopulatesToDashboard</b><br>Test class: com.ijmeet.Tests.SignUpTest</td>
+<td><div><pre>java.lang.AssertionError: does not match : actual Title :null expected Title is : Dashboard expected [Dashboard] but found [null]
+	at com.ijmeet.Tests.SignUpTest.verifyAfterRegistrationIsPagePopulatesToDashboard(SignUpTest.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace314309716", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace314309716'><pre>java.lang.AssertionError: does not match : actual Title :null expected Title is : Dashboard expected [Dashboard] but found [null]
+>>>>>>> origin
 	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:118)
+<<<<<<< HEAD
 	at org.testng.Assert.assertEquals(Assert.java:751)
 	at org.testng.Assert.assertEquals(Assert.java:761)
 	at com.ijmeet.config.TestBase.onTestFailure(TestBase.java:32)
+=======
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at com.ijmeet.Tests.SignUpTest.verifyAfterRegistrationIsPagePopulatesToDashboard(SignUpTest.java:53)
+>>>>>>> origin
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -116,6 +139,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>0</td>
 <td>com.ijmeet.config.TestBase@3e84448c</td></tr>
 <tr>
@@ -645,6 +669,33 @@ Session ID: 8611e78f203ed194be83e803c69bf9d6
 </pre></div></td>
 <td>62</td>
 <td>com.ijmeet.Tests.LoginTest@4a7f959b</td></tr>
+=======
+<td>33</td>
+<td>com.ijmeet.Tests.SignUpTest@4a7f959b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ijmeet.config.TestBase.onTestFailure()'><b>onTestFailure</b><br>Test class: com.ijmeet.config.TestBase</td>
+<td></td>
+<td>0</td>
+<td>com.ijmeet.config.TestBase@3e84448c</td></tr>
+<tr>
+<td title='com.ijmeet.Tests.SignUpTest.onTestFailure()'><b>onTestFailure</b><br>Test class: com.ijmeet.Tests.SignUpTest</td>
+<td></td>
+<td>0</td>
+<td>com.ijmeet.Tests.SignUpTest@4a7f959b</td></tr>
+<tr>
+<td title='com.ijmeet.Tests.SignUpTest.verifyIfClickOnSignUpBttnNavToRegisterPage()'><b>verifyIfClickOnSignUpBttnNavToRegisterPage</b><br>Test class: com.ijmeet.Tests.SignUpTest</td>
+<td></td>
+<td>10</td>
+<td>com.ijmeet.Tests.SignUpTest@4a7f959b</td></tr>
+>>>>>>> origin
 </table><p>
 </body>
 </html>

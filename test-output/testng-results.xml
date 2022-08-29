@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="38" passed="17" failed="21" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -8,6 +9,29 @@
     <test started-at="2022-08-29T16:47:01 IST" name="Default test" finished-at="2022-08-29T17:17:13 IST" duration-ms="1812247">
       <class name="com.ijmeet.Tests.SignInTest">
         <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.SignInTest@4d0f2471]" started-at="2022-08-29T16:47:01 IST" name="setUp" finished-at="2022-08-29T16:47:33 IST" duration-ms="32199" status="PASS">
+=======
+<<<<<<< HEAD
+<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-09T15:27:10 IST" name="Default suite" finished-at="2022-08-09T15:28:30 IST" duration-ms="79880">
+    <groups>
+    </groups>
+    <test started-at="2022-08-09T15:27:10 IST" name="Default test" finished-at="2022-08-09T15:28:30 IST" duration-ms="79880">
+      <class name="com.ijmeet.Tests.SignUpTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.SignUpTest@7e5afaa6]" started-at="2022-08-09T15:27:10 IST" name="setUp" finished-at="2022-08-09T15:27:27 IST" duration-ms="17349" status="PASS">
+=======
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-25T17:06:11 IST" name="Default suite" finished-at="2022-08-25T17:06:35 IST" duration-ms="23777">
+    <groups>
+    </groups>
+    <test started-at="2022-08-25T17:06:11 IST" name="Default test" finished-at="2022-08-25T17:06:35 IST" duration-ms="23777">
+      <class name="com.ijmeet.Tests.TwitterTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.TwitterTests@68d279ec]" started-at="2022-08-25T17:06:11 IST" name="setUp" finished-at="2022-08-25T17:06:16 IST" duration-ms="4660" status="PASS">
+>>>>>>> 40425512256cc55c960d25460943d285a51aa2d0
+>>>>>>> origin
           <params>
             <param index="0">
               <value>
@@ -18,6 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
+<<<<<<< HEAD
         <test-method signature="verifyAbout_us_LinkIsPresentOnSignInPage()[pri:0, instance:com.ijmeet.Tests.SignInTest@4d0f2471]" started-at="2022-08-29T16:47:33 IST" name="verifyAbout_us_LinkIsPresentOnSignInPage" finished-at="2022-08-29T16:48:18 IST" duration-ms="44866" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -304,6 +329,37 @@ at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:637)
 at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
 at com.ijmeet.pages.SignInPage.clickOnSignInWithFaceBookLink(SignInPage.java:147)
 at com.ijmeet.Tests.SignInTest.verifyFacebookLinkNavigateToSignInWithFacebookPage(SignInTest.java:245)
+=======
+<<<<<<< HEAD
+        <test-method signature="verifyAfterRegistrationIsPagePopulatesToDashboard()[pri:0, instance:com.ijmeet.Tests.SignUpTest@7e5afaa6]" started-at="2022-08-09T15:27:27 IST" name="verifyAfterRegistrationIsPagePopulatesToDashboard" finished-at="2022-08-09T15:27:59 IST" duration-ms="31399" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[does not match : actual Title :null expected Title is : Dashboard expected [Dashboard] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: does not match : actual Title :null expected Title is : Dashboard expected [Dashboard] but found [null]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.ijmeet.Tests.SignUpTest.verifyAfterRegistrationIsPagePopulatesToDashboard(SignUpTest.java:53)
+=======
+        <test-method signature="onTestFailure()[pri:0, instance:com.ijmeet.Tests.TwitterTests@68d279ec]" started-at="2022-08-25T17:06:16 IST" name="onTestFailure" finished-at="2022-08-25T17:06:16 IST" duration-ms="86" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:751)
+at org.testng.Assert.assertEquals(Assert.java:761)
+at com.ijmeet.config.TestBase.onTestFailure(TestBase.java:32)
+>>>>>>> 40425512256cc55c960d25460943d285a51aa2d0
+>>>>>>> origin
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -332,6 +388,7 @@ at org.testng.TestNG.run(TestNG.java:1007)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<<<<<<< HEAD
 Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
 Build info: version: '4.3.0', revision: 'a4995e2c09*'
 System info: host: 'DESKTOP-MOB5JUI', ip: '192.168.82.240', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
@@ -379,11 +436,14 @@ at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:2
 at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
 at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
 ... 64 more
+=======
+>>>>>>> origin
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.json.JsonException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- verifyFacebookLinkNavigateToSignInWithFacebookPage -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.SignInTest@4d0f2471]" started-at="2022-08-29T16:52:08 IST" name="tearDown" finished-at="2022-08-29T16:52:08 IST" duration-ms="257" status="PASS">
           <reporter-output>
@@ -2270,6 +2330,42 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.ijmeet.Tests.SignInTest -->
+=======
+<<<<<<< HEAD
+        </test-method> <!-- verifyAfterRegistrationIsPagePopulatesToDashboard -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.SignUpTest@7e5afaa6]" started-at="2022-08-09T15:28:26 IST" name="tearDown" finished-at="2022-08-09T15:28:30 IST" duration-ms="3752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ijmeet.Tests.SignUpTest -->
+=======
+        </test-method> <!-- onTestFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.TwitterTests@68d279ec]" started-at="2022-08-25T17:06:18 IST" name="tearDown" finished-at="2022-08-25T17:06:19 IST" duration-ms="760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.ijmeet.Tests.TwitterTests@68d279ec]" started-at="2022-08-25T17:06:19 IST" name="setUp" finished-at="2022-08-25T17:06:21 IST" duration-ms="2092" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyIfTwitterButtonWorks()[pri:0, instance:com.ijmeet.Tests.TwitterTests@68d279ec]" started-at="2022-08-25T17:06:21 IST" name="verifyIfTwitterButtonWorks" finished-at="2022-08-25T17:06:30 IST" duration-ms="8881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIfTwitterButtonWorks -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ijmeet.Tests.TwitterTests@68d279ec]" started-at="2022-08-25T17:06:30 IST" name="tearDown" finished-at="2022-08-25T17:06:35 IST" duration-ms="4964" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ijmeet.Tests.TwitterTests -->
+>>>>>>> 40425512256cc55c960d25460943d285a51aa2d0
+>>>>>>> origin
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
