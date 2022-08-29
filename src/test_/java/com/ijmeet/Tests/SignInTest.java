@@ -7,38 +7,52 @@ import org.testng.annotations.Test;
 import com.ijmeet.config.TestBase;
 import com.ijmeet.keyword.UIKeyword;
 import com.ijmeet.pages.SignInPage;
-import com.ijmeet.pages.Sign_UpPage;
 import com.ijmeet.utils.EnvironmentUtil;
 
-@Test
-public class Sign_UpTest extends TestBase {
+public class SignInTest extends TestBase {
 
-	public void verifyRegistrationFormAcceptsDetails() throws InterruptedException {
+	@Test
+	public void verifyloginPageOfijmeetIsPresentByClickOnSignInTab() {
 
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
+		String Expectedurl = "/login";
+
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.fillForm();
-		sp.reCaptchaClick();
-		sp.clickOnsignUP();
+		lp.clickOnSignIn_Button();
+		String actualurl = UIKeyword.driver.getCurrentUrl();
+		if (actualurl.contains(Expectedurl)) {
+			actualurl = Expectedurl;
+			Assert.assertEquals(actualurl, Expectedurl, "Actual and expected is not match");
+		}
+	}
+
+	@Test
+	public void verifyUserCanLoginWithEmailAndPassword() {
+
+		EnvironmentUtil env = new EnvironmentUtil();
+		SignInPage lp = new SignInPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		lp.clickOnSignIn_Button();
+		lp.loginInToUserAccount();
 		String expectedUrl = "/dashboard";
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
 
 		if (actualUrl.contains(expectedUrl)) {
 			actualUrl = expectedUrl;
-			Assert.assertEquals(actualUrl, expectedUrl);
 		}
-
+		Assert.assertEquals(actualUrl, expectedUrl);
 	}
 
-	public void verifySignUpPageConsistOfHostMeetinglink() {
+	@Test
+	public void verifySignInPageConsistOfHostMeetinglink() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
-		sp.clickOnSign_UP();
-		sp.clickOnHostMeeting();
+		lp.clickOnSignIn_Button();
+		lp.clickOnHostMeeting();
 		String actual = UIKeyword.driver.getCurrentUrl();
 		String expected = "/host";
 		if (actual.contains(expected)) {
@@ -48,13 +62,14 @@ public class Sign_UpTest extends TestBase {
 
 	}
 
-	public void verifySignUpPageConsistOfJoinMeetinglink() {
+	@Test
+	public void verifySignInPageConsistOfJoinMeetinglink() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnJoinMeeting();
+		lp.clickOnSignIn_Button();
+		lp.clickOnJoinMeeting();
 
 		String actual = UIKeyword.driver.findElement(By.xpath("//h2[@class='m-txt']")).getText();
 		String expected = "Join meeting";
@@ -64,13 +79,14 @@ public class Sign_UpTest extends TestBase {
 		}
 	}
 
-	public void verifySignUpPageConsistOfContactSalelink() {
+	@Test
+	public void verifySignInPageConsistOfContactSalelink() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnContactSale();
+		lp.clickOnSignIn_Button();
+		lp.clickOnContactSale();
 		String actual = UIKeyword.driver.getCurrentUrl();
 		String expected = "/contact";
 		if (actual.contains(expected)) {
@@ -80,13 +96,14 @@ public class Sign_UpTest extends TestBase {
 
 	}
 
-	public void verifySignUpPageConsistOfSignInButton() {
+	@Test
+	public void verifySignInPageConsistOfSignInButton() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnSignInTab();
+		lp.clickOnSignIn_Button();
+		lp.clickOnSignInTab();
 		String actual = UIKeyword.driver.findElement(By.xpath("//h4")).getText();
 		String expected = "Sign In";
 		if (actual.contains(expected)) {
@@ -96,13 +113,14 @@ public class Sign_UpTest extends TestBase {
 
 	}
 
-	public void verifySignUpPageConsistOfSignUpButton() {
+	@Test
+	public void verifySignInPageConsistOfSignUpButton() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnSign_UP();
+		lp.clickOnSignIn_Button();
+		lp.clickOnSignUpTab();
 		String actual = UIKeyword.driver.findElement(By.xpath("//h4")).getText();
 		String expected = "Sign Up";
 		if (actual.contains(expected)) {
@@ -111,13 +129,14 @@ public class Sign_UpTest extends TestBase {
 		}
 	}
 
-	public void verifySignUpPageConsistOfLanguageTranslatorButton() {
+	@Test
+	public void verifySignInPageConsistOfLanguageTranslatorButton() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnArabicLanguageTranslatorTab();
+		lp.clickOnSignIn_Button();
+		lp.clickOnArabicLanguageTranslatorTab();
 		String actual = UIKeyword.driver.findElement(By.xpath("//span[@class='language-trance-arabic']")).getText();
 		String exp = "English";
 		if (actual.contains(exp)) {
@@ -126,30 +145,14 @@ public class Sign_UpTest extends TestBase {
 		}
 	}
 
-	public void verifyAlreadyAccountIsPresent() {
-		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
-		UIKeyword.launchUrl(env.getappUrl());
-		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
-		String actualString = UIKeyword.driver
-				.findElement(By.xpath("//label[@class='form-check-label-dont-have mb-0']")).getText();
-		String expectedString = "Already have account";
-		if (actualString.contains(expectedString)) {
-			expectedString = actualString;
-			Assert.assertEquals(actualString, expectedString, "actual and expected are not match exactly");
-		}
-	}
-
+	@Test
 	public void verifyLoginWithSignInLinkIsPresent() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
-
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actualString = UIKeyword.driver
 				.findElement(By.xpath("//label[@class='form-check-label-dont-have mb-0']/a/span")).getText();
 		String expectedString = "Login In";
@@ -160,16 +163,16 @@ public class Sign_UpTest extends TestBase {
 
 	}
 
+	@Test
 	public void verifyLoginLinkNavigateToLoginPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
-
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
+		lp.clickOnSignInTab();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
-
 		String expectedUrl = "/login";
 		if (actualUrl.contains(expectedUrl)) {
 			expectedUrl = actualUrl;
@@ -177,14 +180,15 @@ public class Sign_UpTest extends TestBase {
 		}
 	}
 
+	@Test
 	public void verifySignInWithGoogleLinkIsPresent() {
 
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 
 		String actualString = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='form-group common-view-sign-in']/a[1]")).getText();
@@ -195,16 +199,17 @@ public class Sign_UpTest extends TestBase {
 		}
 	}
 
+	@Test
 	public void verifyGoogleLinkNavigateToSignInWithGooglePage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
-		sp.clickOnSignInWithGoogleLink();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
+		lp.clickOnSignInWithGoogleLink();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
-		String expUrl = "https://ijmeet.com/login/google";
+		String expUrl = "/google";
 		if (actualUrl.contains(expUrl)) {
 			expUrl = actualUrl;
 			Assert.assertEquals(actualUrl, expUrl, "actual and expected are not match exactly");
@@ -212,13 +217,14 @@ public class Sign_UpTest extends TestBase {
 		}
 	}
 
+	@Test
 	public void verifySignInWithFaceBookLinkIsPresent() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actualString = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='form-group common-view-sign-in']/a[2]")).getText();
 		String expectedString = "Sign in with Facebook";
@@ -228,14 +234,15 @@ public class Sign_UpTest extends TestBase {
 		}
 	}
 
+	@Test
 	public void verifyFacebookLinkNavigateToSignInWithFacebookPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
-		sp.clickOnSignInWithFaceBookLink();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
+		lp.clickOnSignInWithFaceBookLink();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
 		String expUrl = "https://ijmeet.com/login/facebook";
 		if (actualUrl.contains(expUrl)) {
@@ -244,13 +251,14 @@ public class Sign_UpTest extends TestBase {
 		}
 	}
 
+	@Test
 	public void verifySignInWithFederationLinkIsPresent() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 
 		String actualString = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='form-group common-view-sign-in']/a[3]")).getText();
@@ -261,27 +269,104 @@ public class Sign_UpTest extends TestBase {
 		}
 	}
 
-	/*
-	 * public void verifyFederationLinkNavigateToSignInWithFederationPage() {
-	 * EnvironmentUtil env = new EnvironmentUtil(); Sign_UpPage sp = new
-	 * Sign_UpPage(); UIKeyword.launchUrl(env.getappUrl());
-	 * UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-	 * sp.clickOnSign_UP(); sp.checkForLoginIn();
-	 * sp.clickOnSignInWithFederationLink(); String
-	 * actualUrl=UIKeyword.driver.getCurrentUrl(); String
-	 * expUrl="https://ijmeet.com/login/google"; if (actualUrl.contains(expUrl)) {
-	 * expUrl=actualUrl; Assert.assertEquals(actualUrl, expUrl,
-	 * "actual and expected are not match exactly"); } }
-	 */
+	@Test
+	public void verifyFederationLinkNavigateToSignInWithFederationPage() {
+		EnvironmentUtil env = new EnvironmentUtil();
+		SignInPage lp = new SignInPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
+		lp.clickOnSignInWithFederationLink();
+		String actualUrl = UIKeyword.driver.getCurrentUrl();
+		String expUrl = "https://ijmeet.com/login/google";
+		if (actualUrl.contains(expUrl)) {
+			expUrl = actualUrl;
+			Assert.assertEquals(actualUrl, expUrl, "actual and expected are not match exactly");
+		}
+	}
+
+	@Test
+	public void verifyDontHaveAccountIsPresent() {
+
+		EnvironmentUtil env = new EnvironmentUtil();
+		SignInPage lp = new SignInPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
+		String actualString = UIKeyword.driver
+				.findElement(By.xpath("//label[@class='form-check-label-dont-have px-0 mb-0']")).getText();
+		String expectedString = "Don't have an account";
+		if (actualString.contains(expectedString)) {
+			expectedString = actualString;
+			Assert.assertEquals(actualString, expectedString, "actual and expected are not match exactly");
+		}
+	}
+
+	@Test
+	public void verifySignUpButtonIsPresent() {
+		EnvironmentUtil env = new EnvironmentUtil();
+		SignInPage lp = new SignInPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
+		String actual = UIKeyword.driver
+				.findElement(By.xpath("//label[@class='form-check-label-dont-have px-0 mb-0']/a")).getText();
+		String expe = "Sign Up";
+		if (actual.contains(expe)) {
+			expe = actual;
+			Assert.assertEquals(actual, expe, "actual and expected are not match exactly");
+		}
+
+	}
+
+	@Test
+	public void verifyFogottPasswordLinkIsPresent() {
+
+		EnvironmentUtil env = new EnvironmentUtil();
+		SignInPage lp = new SignInPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
+		String actual = UIKeyword.driver.findElement(By.xpath("//a[@class='auth-link text-black']")).getText();
+		String expe = "Forgot your password";
+		if (actual.contains(expe)) {
+			expe = actual;
+			Assert.assertEquals(actual, expe, "actual and expected are not match exactly");
+		}
+
+	}
+
+	@Test
+	public void verifyForgottPasswordNavigateToPasswordResetPage() {
+
+		EnvironmentUtil env = new EnvironmentUtil();
+		SignInPage lp = new SignInPage();
+		UIKeyword.launchUrl(env.getappUrl());
+		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
+		lp.clickonForgotPassword();
+		String actual = UIKeyword.driver.getCurrentUrl();
+		String expe = "/reset";
+		if (actual.contains(expe)) {
+			expe = actual;
+			Assert.assertEquals(actual, expe, "actual and expected are not match exactly");
+		}
+	}
+
 	@Test
 	public void verifyAddressisPresentOnSignInPage() {
 
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actual = UIKeyword.driver.findElement(By.xpath("//div[@class='footer-address-customer']/h6")).getText();
 		String expected = "Address";
 		if (actual.contains(expected)) {
@@ -294,11 +379,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifySupportLinkIsPresentOnSignInPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actual = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='row footer-last-view-support']/div[2]/ul/li[1]/a")).getText();
 		String expected = "Support";
@@ -312,11 +397,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifyContact_Us_LinkIsPresentOnSignInPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actual = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='row footer-last-view-support']/div[2]/ul/li[2]/a")).getText();
 		String expected = "Contact Us";
@@ -330,11 +415,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifyAbout_us_LinkIsPresentOnSignInPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actual = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='row footer-last-view-support']/div[3]/ul/li[1]/a")).getText();
 		String expected = "About Us";
@@ -348,11 +433,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifyTermsAndConditionsLinkIsPresentOnSignInPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actual = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='row footer-last-view-support']/div[3]/ul/li[2]/a")).getText();
 		String expected = "Terms and Conditions";
@@ -367,11 +452,11 @@ public class Sign_UpTest extends TestBase {
 	public void verifyPrivacyAndPolicyLinkIsPresentOnSignInPage() {
 
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actual = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='row footer-last-view-support']/div[3]/ul/li[3]/a")).getText();
 		String expected = "Privacy Policy";
@@ -385,11 +470,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifyTwitterLinkIsPresentOnSignInPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actual = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='row footer-last-view-support']/div[4]/ul/li[1]/a")).getText();
 		String expected = "Twitter";
@@ -403,11 +488,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifyFaceBookLinkIsPresentOnSignInPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actual = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='row footer-last-view-support']/div[4]/ul/li[2]/a")).getText();
 		String expected = "Facebook";
@@ -421,11 +506,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifyInstagramLinkIsPresentOnSignInPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.checkForLoginIn();
+		lp.clickOnSignIn_Button();
+		lp.checkForLoginIn();
 		String actual = UIKeyword.driver
 				.findElement(By.xpath("//div[@class='row footer-last-view-support']/div[4]/ul/li[3]/a")).getText();
 		String expected = "Instagram";
@@ -439,11 +524,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifySignInTwitterLinkNavigateToTwitterPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnTwitterLink();
+		lp.clickOnSignIn_Button();
+		lp.clickOnTwitterLink();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
 		String expUrl = "/twitter";
 		if (actualUrl.contains(expUrl)) {
@@ -456,11 +541,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifySignInInstagramLinkNavigateToInstagramPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnInstagramLink();
+		lp.clickOnSignIn_Button();
+		lp.clickOnInstagramLink();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
 		String expUrl = "/instagram";
 		if (actualUrl.contains(expUrl)) {
@@ -473,11 +558,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifySignInFacebookLinkNavigateToFacebookPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnFacebookLink();
+		lp.clickOnSignIn_Button();
+		lp.clickOnFacebookLink();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
 		String expUrl = "/facebook";
 		if (actualUrl.contains(expUrl)) {
@@ -491,11 +576,11 @@ public class Sign_UpTest extends TestBase {
 	public void verifySignInSupportLinkNavigateToSupportPage() {
 
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnSupportLink();
+		lp.clickOnSignIn_Button();
+		lp.clickOnSupportLink();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
 		String expUrl = "/support";
 		if (actualUrl.contains(expUrl)) {
@@ -508,11 +593,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifySignInContact_UsLinkNavigateTo_Contact_Us_Page() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnContactUsLink();
+		lp.clickOnSignIn_Button();
+		lp.clickOnContactUsLink();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
 		String expUrl = "/contact";
 		if (actualUrl.contains(expUrl)) {
@@ -525,11 +610,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifySignInAbout_UsLinkNavigateToAboutUsPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnAboutUsLink();
+		lp.clickOnSignIn_Button();
+		lp.clickOnAboutUsLink();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
 		String expUrl = "/about";
 		if (actualUrl.contains(expUrl)) {
@@ -542,11 +627,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifySignInTermsAndConditionsLinkNavigateToTermsAndConditionsPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnTermsAndConditionsLink();
+		lp.clickOnSignIn_Button();
+		lp.clickOnTermsAndConditionsLink();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
 		String expUrl = "/terms";
 		if (actualUrl.contains(expUrl)) {
@@ -559,11 +644,11 @@ public class Sign_UpTest extends TestBase {
 	@Test
 	public void verifySignInPrivacyPolicyLinkNavigateToPrivacyPolicysPage() {
 		EnvironmentUtil env = new EnvironmentUtil();
-		Sign_UpPage sp = new Sign_UpPage();
+		SignInPage lp = new SignInPage();
 		UIKeyword.launchUrl(env.getappUrl());
 		UIKeyword.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-		sp.clickOnSign_UP();
-		sp.clickOnPrivacyPolicyLink();
+		lp.clickOnSignIn_Button();
+		lp.clickOnPrivacyPolicyLink();
 		String actualUrl = UIKeyword.driver.getCurrentUrl();
 		String expUrl = "/privacy";
 		if (actualUrl.contains(expUrl)) {

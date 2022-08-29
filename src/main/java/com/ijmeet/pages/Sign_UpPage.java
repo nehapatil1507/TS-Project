@@ -1,7 +1,6 @@
 package com.ijmeet.pages;
 
 import java.time.Duration;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +10,31 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.ijmeet.keyword.UIKeyword;
 
 public class Sign_UpPage {
+
+	@FindBy(xpath = "//div[@class='row footer-last-view-support']/div[2]/ul/li[1]/a")
+	public WebElement Support_Link;
+
+	@FindBy(xpath = "//div[@class='row footer-last-view-support']/div[2]/ul/li[2]/a")
+	public WebElement Contact_us_link;
+
+	@FindBy(xpath = "//div[@class='row footer-last-view-support']/div[4]/ul/li[1]/a")
+	public WebElement Twitter_Link;
+
+	@FindBy(xpath = "//div[@class='row footer-last-view-support']/div[4]/ul/li[2]/a")
+	public WebElement Facebook_Link;
+
+	@FindBy(xpath = "//div[@class='row footer-last-view-support']/div[4]/ul/li[3]/a")
+	public WebElement Instagram_Link;
+
+	@FindBy(xpath = "//div[@class='row footer-last-view-support']/div[3]/ul/li[1]/a")
+	public WebElement About_Us_Link;
+
+	@FindBy(xpath = "//div[@class='row footer-last-view-support']/div[3]/ul/li[2]/a")
+	public WebElement Terms_And_Conditions_Link;
+
+	@FindBy(xpath = "//div[@class='row footer-last-view-support']/div[3]/ul/li[3]/a")
+	public WebElement Privacy_Policy_Link;
+
 	@FindBy(xpath = "//input[@placeholder=' Enter full name ']")
 	public WebElement fullName;
 
@@ -67,15 +91,15 @@ public class Sign_UpPage {
 	@FindBy(xpath = "//ul[@class='navbar-nav ml-auto customize-right-navbar']/li[6]/a/span[2]")
 	public WebElement arabic_language_convertor_tab;
 
-	@FindBy(xpath="//a[@href='https://ijmeet.com/login/google?csrt=4494339304593800721']")
+	@FindBy(xpath = "//a[@href='https://ijmeet.com/login/google?csrt=4494339304593800721']")
 	public WebElement Sign_In_With_GoogleLink;
-	
-	@FindBy(xpath="//a[@href='https://ijmeet.com/login/facebook?csrt=4494339304593800721']")
+
+	@FindBy(xpath = "//a[@href='https://ijmeet.com/login/facebook?csrt=4494339304593800721']")
 	public WebElement Sign_In_With_FaceBookLink;
-	
-	@FindBy(xpath="//a[@href='https://saml.ijmeet.com/shibauth/sso-live.php']")
+
+	@FindBy(xpath = "//a[@href='https://saml.ijmeet.com/shibauth/sso-live.php']")
 	public WebElement Sign_In_With_FederationLink;
-	
+
 	public Sign_UpPage() {
 
 		PageFactory.initElements(UIKeyword.driver, this);
@@ -84,7 +108,6 @@ public class Sign_UpPage {
 	public void clickOnSign_UP() {
 		Actions act = new Actions(UIKeyword.driver);
 		act.click(Sign_Up).build().perform();
-
 	}
 
 	public void fillForm() throws InterruptedException {
@@ -168,7 +191,7 @@ public class Sign_UpPage {
 	public void clickOnSignInWithGoogleLink() {
 		Actions act = new Actions(UIKeyword.driver);
 		act.click(SignUp).click(Sign_In_With_GoogleLink).build().perform();
-		 
+
 	}
 
 	public void clickOnSignInWithFaceBookLink() {
@@ -185,6 +208,49 @@ public class Sign_UpPage {
 		Actions act = new Actions(UIKeyword.driver);
 		act.click(SignUp).build().perform();
 
+	}
+
+	public void clickOnTwitterLink() {
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).scrollToElement(Twitter_Link).click(Twitter_Link).build().perform();
+	}
+
+	public void clickOnInstagramLink() {
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).scrollToElement(Instagram_Link).click(Instagram_Link).build().perform();
+	}
+
+	public void clickOnFacebookLink() {
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).scrollToElement(Facebook_Link).click(Facebook_Link).build().perform();
+	}
+
+	public void clickOnSupportLink() {
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).scrollToElement(Support_Link).click(Support_Link).build().perform();
+
+	}
+
+	public void clickOnContactUsLink() {
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).scrollToElement(Contact_us_link).click(Contact_us_link).build().perform();
+	}
+
+	public void clickOnAboutUsLink() {
+
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).scrollToElement(About_Us_Link).click(About_Us_Link).build().perform();
+	}
+
+	public void clickOnTermsAndConditionsLink() {
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).scrollToElement(Terms_And_Conditions_Link).click(Terms_And_Conditions_Link).build().perform();
+	}
+
+	public void clickOnPrivacyPolicyLink() {
+
+		Actions act = new Actions(UIKeyword.driver);
+		act.click(SignUp).scrollToElement(Privacy_Policy_Link).click(Privacy_Policy_Link).build().perform();
 	}
 
 }

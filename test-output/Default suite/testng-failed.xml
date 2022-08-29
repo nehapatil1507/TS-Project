@@ -3,13 +3,33 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ijmeet.Tests.Sign_UpTest">
+      <class name="com.ijmeet.Tests.SignInTest">
         <methods>
+          <include name="verifyForgottPasswordNavigateToPasswordResetPage"/>
+          <include name="verifyGoogleLinkNavigateToSignInWithGooglePage"/>
+          <include name="verifyTwitterLinkIsPresentOnSignInPage"/>
           <include name="onTestFailure"/>
+          <include name="verifySignInTermsAndConditionsLinkNavigateToTermsAndConditionsPage"/>
           <include name="tearDown"/>
+          <include name="verifySignInAbout_UsLinkNavigateToAboutUsPage"/>
+          <include name="verifySignInPageConsistOfSignUpButton"/>
+          <include name="verifySignInInstagramLinkNavigateToInstagramPage"/>
+          <include name="verifyUserCanLoginWithEmailAndPassword"/>
+          <include name="verifySignInContact_UsLinkNavigateTo_Contact_Us_Page"/>
+          <include name="verifySignInSupportLinkNavigateToSupportPage"/>
+          <include name="verifySignInFacebookLinkNavigateToFacebookPage"/>
+          <include name="verifySignInTwitterLinkNavigateToTwitterPage"/>
+          <include name="verifyDontHaveAccountIsPresent"/>
+          <include name="verifySignInPageConsistOfHostMeetinglink"/>
+          <include name="verifyContact_Us_LinkIsPresentOnSignInPage"/>
+          <include name="verifyFacebookLinkNavigateToSignInWithFacebookPage"/>
+          <include name="verifyLoginWithSignInLinkIsPresent"/>
+          <include name="verifySignUpButtonIsPresent"/>
           <include name="setUp"/>
+          <include name="verifyFogottPasswordLinkIsPresent"/>
+          <include name="verifySignInPrivacyPolicyLinkNavigateToPrivacyPolicysPage"/>
         </methods>
-      </class> <!-- com.ijmeet.Tests.Sign_UpTest -->
+      </class> <!-- com.ijmeet.Tests.SignInTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
