@@ -13,10 +13,10 @@ public class LoginPage {
 	public WebElement signup;
 
 	@FindBy(xpath = "//input[@id='email']")
-	public By email;
+	public WebElement email;
 
 	@FindBy(xpath = "//input[@id='password']")
-	public By password;
+	public WebElement password;
 
 	@FindBy(xpath = "//input[@type='checkbox']")
 	public WebElement checkBox;
