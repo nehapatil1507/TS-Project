@@ -23,6 +23,7 @@ public class UIKeyword {
 
 	public static void openBrowser(String browserName) {
 		if (browserName.equalsIgnoreCase("Chrome")) {
+
 			WebDriverManager.chromedriver().setup();
 			// System.setProperty("Webdriver.chrome.driver", "chromedriver.exe");
 			ChromeOptions option = new ChromeOptions();
@@ -62,6 +63,7 @@ public class UIKeyword {
 		}
 	}
 
+
 	public static void enterText(WebElement name, String text) {
 
 		((WebElement) driver.findElements((By) name)).sendKeys(text);
@@ -87,11 +89,9 @@ public class UIKeyword {
 		act.click(element).build().perform();
 	}
 
-	
 	public static void clickOn(WebElement element) {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 
 		jse.executeScript("arguments[0].scrollIntoView()", element);
 	}
-
 }

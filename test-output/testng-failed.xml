@@ -4,6 +4,15 @@
   <test thread-count="5" name="Default test(failed)">
     <classes>
 <<<<<<< HEAD
+      <class name="com.ijmeet.Tests.SignInTest">
+        <methods>
+          <include name="verifyForgottPasswordNavigateToPasswordResetPage"/>
+          <include name="verifyGoogleLinkNavigateToSignInWithGooglePage"/>
+          <include name="verifyTwitterLinkIsPresentOnSignInPage"/>
+          <include name="onTestFailure"/>
+          <include name="verifySignInTermsAndConditionsLinkNavigateToTermsAndConditionsPage"/>
+=======
+<<<<<<< HEAD
       <class name="com.ijmeet.Tests.SignUpTest">
         <methods>
 =======
@@ -11,8 +20,29 @@
         <methods>
           <include name="onTestFailure"/>
 >>>>>>> 40425512256cc55c960d25460943d285a51aa2d0
+>>>>>>> origin
           <include name="tearDown"/>
+          <include name="verifySignInAbout_UsLinkNavigateToAboutUsPage"/>
+          <include name="verifySignInPageConsistOfSignUpButton"/>
+          <include name="verifySignInInstagramLinkNavigateToInstagramPage"/>
+          <include name="verifyUserCanLoginWithEmailAndPassword"/>
+          <include name="verifySignInContact_UsLinkNavigateTo_Contact_Us_Page"/>
+          <include name="verifySignInSupportLinkNavigateToSupportPage"/>
+          <include name="verifySignInFacebookLinkNavigateToFacebookPage"/>
+          <include name="verifySignInTwitterLinkNavigateToTwitterPage"/>
+          <include name="verifyDontHaveAccountIsPresent"/>
+          <include name="verifySignInPageConsistOfHostMeetinglink"/>
+          <include name="verifyContact_Us_LinkIsPresentOnSignInPage"/>
+          <include name="verifyFacebookLinkNavigateToSignInWithFacebookPage"/>
+          <include name="verifyLoginWithSignInLinkIsPresent"/>
+          <include name="verifySignUpButtonIsPresent"/>
           <include name="setUp"/>
+<<<<<<< HEAD
+          <include name="verifyFogottPasswordLinkIsPresent"/>
+          <include name="verifySignInPrivacyPolicyLinkNavigateToPrivacyPolicysPage"/>
+        </methods>
+      </class> <!-- com.ijmeet.Tests.SignInTest -->
+=======
           <include name="verifyAfterRegistrationIsPagePopulatesToDashboard"/>
         </methods>
 <<<<<<< HEAD
@@ -20,6 +50,7 @@
 =======
       </class> <!-- com.ijmeet.Tests.TwitterTests -->
 >>>>>>> 40425512256cc55c960d25460943d285a51aa2d0
+>>>>>>> origin
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
